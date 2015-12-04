@@ -1,0 +1,26 @@
+﻿<vmBase:CustomViewBase 
+    x:TypeArguments="viewModel:FirstRoleVM"
+    x:Class="View.FirstUserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:View"
+             xmlns:viewModel="clr-namespace:ViewModel;assembly=ViewModel"
+             xmlns:vmBase="clr-namespace:VMBase;assembly=VMBase"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <xctk:ColorPicker Name="ClrPcker" 
+                          HorizontalAlignment="Center" Height="25" Width="150" Grid.Row="1"></xctk:ColorPicker>
+        <Button Name="ShowMessageButton" HorizontalAlignment="Center" Height="20" Width="100" Grid.Row="3" Click="ShowMessageClick">ShowMessage</Button>
+    </Grid>
+</vmBase:CustomViewBase>
